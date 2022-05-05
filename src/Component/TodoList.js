@@ -16,12 +16,15 @@ export default function TodoList() {
     setText("");
   };
   const deleteList = () => {
-    console.log("you have clicked delete button");
-    const deltask = task.pop();
-    const finalData = task;
-    setTask(finalData);
-    console.log(`you have deleted task ${deltask}`);
-    console.log(task);
+    let lastTask = [...task];
+    lastTask.pop();
+    setTask(lastTask);
+    // console.log("you have clicked delete button");
+    // const deltask = task.pop();
+    // const finalData = task;
+    // setTask(finalData);
+    // console.log(`you have deleted task ${deltask}`);
+    // console.log(task);
   };
   const onChange = (event) => {
     setText(event.target.value);
